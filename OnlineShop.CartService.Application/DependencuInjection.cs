@@ -1,7 +1,6 @@
-﻿namespace OnlineShop.CartService.Application
-{
-    public class DependencuInjection
-    {
+﻿namespace OnlineShop.CartService.Application;
 
-    }
+public class DependencuInjection
+{
+
 }

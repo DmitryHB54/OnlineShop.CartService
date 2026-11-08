@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="OnlineShop.CartService.Application/OnlineShop.CartService.Application.csproj" Id="48d3f943-b704-4f6c-a5d5-164652d8ca6e" />
+  <Project Path="OnlineShop.CartService.Infrastructure/OnlineShop.CartService.Infrastructure.csproj" Id="1bdc9323-605f-47cc-b97e-cfc17388c238" />
+  <Project Path="OnlineShop.CartService.WebApi/OnlineShop.CartService.WebApi.csproj" />
+  <Project Path="OnlineShop.Domain/OnlineShop.CartService.Domain.csproj" Id="1e9c2219-a661-4ff5-acd1-667b81b0dae5" />
+</Solution>

@@ -2,7 +2,7 @@
 using System.Net.Http.Json;
 using Microsoft.Extensions.Logging;
 using OnlineShop.CartService.Application.Dtos;
-using OnlineShop.CartService.Application.Interface;
+using OnlineShop.CartService.Application.Interfaces.HttpCllients;
 
 namespace OnlineShop.CartService.Infrastructure.Services;
 

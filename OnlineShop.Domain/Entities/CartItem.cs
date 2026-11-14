@@ -25,6 +25,6 @@ public class CartItem
     {
         if (newQuantity <= 0) 
             throw new ArgumentException("Quantity must be positive");
-        Quantity = newQuantity;
+        Quantity += newQuantity;
     }
 }

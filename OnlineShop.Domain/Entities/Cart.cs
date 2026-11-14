@@ -19,7 +19,7 @@ public class Cart
         CreatedAt = DateTime.UtcNow;
     }
 
-    public void AddItem(Guid productId, string productName, decimal unitPrice, int quantity)
+    public (CartItem Item, bool IsNew) AddItem(Guid productId, string productName, decimal unitPrice, int quantity)
     {
         var existingItem 
             = _items.FirstOrDefault(i => i.ProductId == productId);
@@ -27,18 +27,22 @@ public class Cart
         if(existingItem != null)
         {
             existingItem.UpdateQuantity(quantity);
-        }
-        else
-        {
-            _items.Add(new CartItem(Id, productId, productName, unitPrice, quantity));
+            return (existingItem, false);
         }
 
+        var newItem = new CartItem(Id, productId, productName, unitPrice, quantity);
+        _items.Add(newItem);
+ 
         UpdatedAt = DateTime.UtcNow;
+
+        return (newItem, true);
     }
 
     public void RemoveItem(Guid productId)
     {
-        var item = _items.FirstOrDefault(i => i.ProductId == productId);
+        var item =
+            _items.FirstOrDefault(i => i.ProductId == productId);
+
         if(item != null)
         {
             _items.Remove(item);

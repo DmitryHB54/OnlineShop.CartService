@@ -1,6 +1,6 @@
 ﻿using OnlineShop.CartService.Application.Dtos;
 
-namespace OnlineShop.CartService.Application.Interface;
+namespace OnlineShop.CartService.Application.Interfaces.HttpCllients;
 
 public interface ICatalogServiceClient
 {
